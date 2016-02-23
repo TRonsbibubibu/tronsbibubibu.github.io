@@ -4,17 +4,27 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>TRons的博客</title>
+  <title>centos安装lamp环境 | TRons的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TRons的博客">
-<meta property="og:url" content="http://tronsbibubibu.github.io/index.html">
+  <meta name="description" content="今天在一台新机器上安装lamp环境，本来想装一个xampp，省事。但是想到这机器可能以后还是要跑生产环境，还是老老实实手动配置
+机器上跑的是centos6.7，首先把源换成网易源（嘿嘿嘿，大家都懂得）
+
+首先备份/etc/yum.repos.d/CentOS-Base.repo/etc/yum.repos.d/CentOS-Base.repolink1&amp;#20026;&amp;#20102;&amp;#30465">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centos安装lamp环境">
+<meta property="og:url" content="http://tronsbibubibu.github.io/2016/02/23/centos安装lamp环境/index.html">
 <meta property="og:site_name" content="TRons的博客">
-<meta property="og:description">
+<meta property="og:description" content="今天在一台新机器上安装lamp环境，本来想装一个xampp，省事。但是想到这机器可能以后还是要跑生产环境，还是老老实实手动配置
+机器上跑的是centos6.7，首先把源换成网易源（嘿嘿嘿，大家都懂得）
+
+首先备份/etc/yum.repos.d/CentOS-Base.repo/etc/yum.repos.d/CentOS-Base.repolink1&amp;#20026;&amp;#20102;&amp;#30465">
+<meta property="og:updated_time" content="2016-02-23T12:54:28.115Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TRons的博客">
-<meta name="twitter:description">
+<meta name="twitter:title" content="centos安装lamp环境">
+<meta name="twitter:description" content="今天在一台新机器上安装lamp环境，本来想装一个xampp，省事。但是想到这机器可能以后还是要跑生产环境，还是老老实实手动配置
+机器上跑的是centos6.7，首先把源换成网易源（嘿嘿嘿，大家都懂得）
+
+首先备份/etc/yum.repos.d/CentOS-Base.repo/etc/yum.repos.d/CentOS-Base.repolink1&amp;#20026;&amp;#20102;&amp;#30465">
   
     <link rel="alternative" href="/atom.xml" title="TRons的博客" type="application/atom+xml">
   
@@ -179,9 +189,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-centos安装lamp环境" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-centos安装lamp环境" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/02/23/centos安装lamp环境/" class="article-date">
@@ -197,12 +205,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/23/centos安装lamp环境/">centos安装lamp环境</a>
+    <h1 class="article-title" itemprop="name">
+      centos安装lamp环境
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/记录/">记录</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -224,87 +243,40 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/记录/">记录</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/02/21/更换python版本问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">更换python版本问题</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-
-
-
-
-
-
-  
-    <article id="post-更换python版本问题" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/21/更换python版本问题/" class="article-date">
-  	<time datetime="2016-02-21T12:14:39.000Z" itemprop="datePublished">2016-02-21</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/21/更换python版本问题/">更换python版本问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我使用的系统是deepin 15.1,系统默认自带python版本是2.7.11<br>为了尝试一下python3,我去官网下载了源码包</p>
-<p>解压,进入文件根目录后</p>
-<p><code>./configure</code></p>
-<p><code>make</code></p>
-<p><code>make install</code></p>
-<p>然后进入<code>/usr/bin</code> ,把系统默认的python 指向新下载python3.5</p>
-<p><code>ln -s /usr/bin/python3.5 python</code></p>
-<p>然后就开心的用python去了<br>后来才发现系统的功能都无法使用<br>大部分的快捷键,截图,终端都无法使用</p>
-<p>后来才发现是python的问题<br>改了回来,一切也正常了</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/记录/">记录</a></li></ul>
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
@@ -313,9 +285,6 @@
 
 
 
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -339,8 +308,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
