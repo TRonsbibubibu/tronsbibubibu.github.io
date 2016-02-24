@@ -9,7 +9,7 @@
   <meta name="description" content="今天在一台新机器上安装lamp环境，本来想装一个xampp，省事。但是想到这机器可能以后还是要跑生产环境，还是老老实实手动配置
 机器上跑的是centos6.7，首先把源换成网易源（嘿嘿嘿，大家都懂得）
 
-首先备份/etc/yum.repos.d/CentOS-Base.repo/etc/yum.repos.d/CentOS-Base.repolink1&amp;#20026;&amp;#20102;&amp;#30465">
+首先备份/etc/yum.repos.d/CentOS-Base.repo1mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="centos安装lamp环境">
 <meta property="og:url" content="http://tronsbibubibu.github.io/2016/02/23/centos安装lamp环境/index.html">
@@ -17,14 +17,14 @@
 <meta property="og:description" content="今天在一台新机器上安装lamp环境，本来想装一个xampp，省事。但是想到这机器可能以后还是要跑生产环境，还是老老实实手动配置
 机器上跑的是centos6.7，首先把源换成网易源（嘿嘿嘿，大家都懂得）
 
-首先备份/etc/yum.repos.d/CentOS-Base.repo/etc/yum.repos.d/CentOS-Base.repolink1&amp;#20026;&amp;#20102;&amp;#30465">
-<meta property="og:updated_time" content="2016-02-23T12:54:28.115Z">
+首先备份/etc/yum.repos.d/CentOS-Base.repo1mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS">
+<meta property="og:updated_time" content="2016-02-24T06:35:42.902Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos安装lamp环境">
 <meta name="twitter:description" content="今天在一台新机器上安装lamp环境，本来想装一个xampp，省事。但是想到这机器可能以后还是要跑生产环境，还是老老实实手动配置
 机器上跑的是centos6.7，首先把源换成网易源（嘿嘿嘿，大家都懂得）
 
-首先备份/etc/yum.repos.d/CentOS-Base.repo/etc/yum.repos.d/CentOS-Base.repolink1&amp;#20026;&amp;#20102;&amp;#30465">
+首先备份/etc/yum.repos.d/CentOS-Base.repo1mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS">
   
     <link rel="alternative" href="/atom.xml" title="TRons的博客" type="application/atom+xml">
   
@@ -99,7 +99,7 @@
 				        
 							<li><a href="/archives">所有文章</a></li>
 				        
-							<li><a href="/tags/record">记录</a></li>
+							<li><a href="/tags/随笔">随笔</a></li>
 				        
 						</ul>
 					</nav>
@@ -108,11 +108,11 @@
 							
 								<a class="github" target="_blank" href="https://github.com/TRonsbibubibu" title="github">github</a>
 					        
-								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+								<a class="weibo" target="_blank" href="http://weibo.com/u/2408800841" title="weibo">weibo</a>
 					        
 								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
 					        
-								<a class="zhihu" target="_blank" href="/@刘嘉伟" title="zhihu">zhihu</a>
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/liu-jia-wei-81-29" title="zhihu">zhihu</a>
 					        
 						</div>
 					</nav>
@@ -167,7 +167,7 @@
 		        
 					<li><a href="/archives">所有文章</a></li>
 		        
-					<li><a href="/tags/record">记录</a></li>
+					<li><a href="/tags/随笔">随笔</a></li>
 		        
 		        <div class="clearfix"></div>
 				</ul>
@@ -177,11 +177,11 @@
 					
 						<a class="github" target="_blank" href="https://github.com/TRonsbibubibu" title="github">github</a>
 			        
-						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+						<a class="weibo" target="_blank" href="http://weibo.com/u/2408800841" title="weibo">weibo</a>
 			        
 						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
 			        
-						<a class="zhihu" target="_blank" href="/@刘嘉伟" title="zhihu">zhihu</a>
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/liu-jia-wei-81-29" title="zhihu">zhihu</a>
 			        
 				</div>
 			</nav>
@@ -229,15 +229,43 @@
         <p>今天在一台新机器上安装lamp环境，<br>本来想装一个xampp，省事。<br>但是想到这机器可能以后还是要跑生产环境，<br>还是老老实实手动配置</p>
 <p>机器上跑的是centos6.7，<br>首先把源换成网易源（嘿嘿嘿，大家都懂得）</p>
 <ul>
-<li>首先备份/etc/yum.repos.d/CentOS-Base.repo<figure class="highlight"><figcaption><span>/etc/yum.repos.d/CentOS-Base.repo</span><a href="/etc/yum.repos.d/CentOS-Base.repo.backup```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#20026;&#20102;&#30465;&#20107;&#65292;&#25105;&#23601;&#26159;&#30452;&#25509;&#22312;&#32593;&#26131;&#19979;&#36733;&#37197;&#32622;&#25991;&#20214;&#65292;&#19981;&#33258;&#24049;&#37197;&#32622;&#20102;&#10;[&#20256;&#36865;&#38376;](http://mirrors.163.com/.help/CentOS6-Base-163.repo)</span><br></pre></td></tr></table></figure>
+<li>首先备份/etc/yum.repos.d/CentOS-Base.repo<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>yum clean all<br>yum makecache<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#37325;&#26032;&#24314;&#31435;&#32531;&#23384;&#10;&#10;* &#23433;&#35013;apache2&#10;apache2&#22312;centos&#19978;&#21483;&#20570;httpd&#65292;&#10;`yum install httpd`&#10;&#21551;&#21160;apache&#10;`service httpd start`&#10;&#21551;&#21160;&#26041;&#24335;&#36824;&#26377;&#21478;&#22806;&#19968;&#31181;&#65292;&#25105;&#27604;&#36739;&#21916;&#27426;&#36825;&#31181;&#10;&#25171;&#24320;&#27983;&#35272;&#22120;&#30331;&#38470;localhost&#30475;&#21040;apache&#39029;&#38754;&#34920;&#26126;&#25104;&#21151;&#65292;&#10;&#21551;&#21160;&#22833;&#36133;&#30340;&#35805;&#65292;&#30475;&#30475;&#38169;&#35823;&#20449;&#24687;&#26159;&#19981;&#26159;&#31471;&#21475;&#21344;&#29992;&#20043;&#31867;&#30340;&#38382;&#39064;&#10;&#10;* &#23433;&#35013;mysql&#10;`yum install mysql mysql-server`&#10;&#28982;&#21518;&#21551;&#21160;mysql&#10;&#25105;&#24182;&#19981;&#30693;&#36947;&#20182;&#30340;&#21517;&#31216;&#26159;&#20160;&#20040;&#65292;&#10;`service --status-all | grep mysq`&#10;&#30475;&#21040;&#20182;&#21483;mysqld&#10;`service mysqld start`&#10;&#21551;&#21160;&#10;&#10;* &#28982;&#21518;&#23601;&#26159;php&#20102;&#65292;&#29616;&#22312;php7&#24050;&#32463;&#24320;&#22987;&#26222;&#21450;&#20102;&#65292;&#10;&#23601;&#35013;&#19968;&#20010;php7&#10;php7&#22312;linux&#19978;&#35201;&#28304;&#30721;&#32534;&#35793;&#23433;&#35013;&#10;&#22312;&#23448;&#32593;&#19979;&#36733;&#28304;&#30721;&#21253;&#10;[&#23448;&#32593;&#20256;&#36865;&#38376;](http://php.net/downloads.php)&#10;&#25105;&#19979;&#36733;&#30340;&#26159;php7.0.3&#10;`wget http://cn2.php.net/get/php-7.0.3.tar.gz/from/this/mirror`&#10;&#35299;&#21387;&#36827;&#20837;</span><br></pre></td></tr></table></figure></p>
-<p>tar zcvf mirror<br>cd php-7.0-3<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#28982;&#21518;&#32534;&#35793;&#23433;&#35013;</span><br></pre></td></tr></table></figure></p>
-<p>./configure<br>make<br>make install<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#20013;&#36884;&#30475;&#32570;&#23569;&#20160;&#20040;&#20381;&#36182;&#23601;yum&#23433;&#35013;&#20160;&#20040;&#10;&#10;* `service httpd restart`&#10;&#37325;&#21551;&#26381;&#21153;&#22120;&#25171;&#24320;&#32593;&#39029;&#65292;&#21364;&#21457;&#29616;php&#24182;&#27809;&#26377;&#35299;&#26512;&#25104;&#21151;&#10;&#36827;&#21435;&#10;`vim /etc/httpd/conf/httpd.conf`&#10;&#21457;&#29616;&#27809;&#26377;php&#30340;apache&#27169;&#22359;&#20381;&#36182;&#10;&#26597;&#20102;&#19968;&#19979;&#65292;&#26159;&#32534;&#35793;&#30340;&#26102;&#20505;&#32570;&#23569;&#20102;&#21442;&#25968;&#10;&#37325;&#26032;&#32534;&#35793;</span><br></pre></td></tr></table></figure></p>
-<p>./configure –with-apxs2<br>make<br>make install<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#36884;&#20013;&#32570;&#23569;apxs&#30340;&#20381;&#36182;&#65292;&#33258;&#34892;&#23433;&#35013;&#10;* &#37197;&#32622;httd.conf&#10;&#25214;&#21040;&#65306;&#10;`AddType application/x-gzip .gz .tgz`&#10;&#22312;&#35813;&#34892;&#19979;&#38754;&#28155;&#21152;&#10;`AddType application/x-httpd-php .php`&#10;&#25214;&#21040;&#65306;</span><br></pre></td></tr></table></figure></p>
-<p><ifmodule dir_module=""><br>    DirectoryIndex index.html<br></ifmodule><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#23558;&#35813;&#34892;&#25913;&#20026;</span><br></pre></td></tr></table></figure></p>
-<p><ifmodule dir_module=""><br>    DirectoryIndex index.html index.htm index.php<br></ifmodule>```</p>
+<p>为了省事，我就是直接在网易下载配置文件，不自己配置了<br><a href="http://mirrors.163.com/.help/CentOS6-Base-163.repo" target="_blank" rel="external">传送门</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum clean all&#10;yum makecache</span><br></pre></td></tr></table></figure>
+<p>重新建立缓存</p>
+<ul>
+<li>安装apache2<br>apache2在centos上叫做httpd，<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install httpd</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>启动apache<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd start</span><br></pre></td></tr></table></figure></p>
+<p>启动方式还有另外一种，我比较喜欢这种<br>打开浏览器登陆localhost看到apache页面表明成功，<br>启动失败的话，看看错误信息是不是端口占用之类的问题</p>
+<ul>
+<li>安装mysql<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql mysql-server</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后启动mysql<br>我并不知道他的名称是什么，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service --status-all | grep mysq</span><br></pre></td></tr></table></figure></p>
+<p>看到他叫mysqld<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld start</span><br></pre></td></tr></table></figure></p>
+<p>启动</p>
+<ul>
+<li>然后就是php了，现在php7已经开始普及了，<br>就装一个php7<br>php7在linux上要源码编译安装<br>在官网下载源码包<br><a href="http://php.net/downloads.php" target="_blank" rel="external">官网传送门</a><br>我下载的是php7.0.3<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://cn2.php.net/get/php-7.0.3.tar.gz/from/this/mirror</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>解压进入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zcvf mirror&#10;cd php-7.0-3</span><br></pre></td></tr></table></figure></p>
+<p>然后编译安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure&#10;make&#10;make install</span><br></pre></td></tr></table></figure></p>
+<p>中途看缺少什么依赖就yum安装什么</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd restart</span><br></pre></td></tr></table></figure>
+<p>重启服务器打开网页，却发现php并没有解析成功<br>进去<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/httpd/conf/httpd.conf</span><br></pre></td></tr></table></figure></p>
+<p>发现没有php的apache模块依赖<br>查了一下，是编译的时候缺少了参数<br>重新编译<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --with-apxs2&#10;make&#10;make install</span><br></pre></td></tr></table></figure></p>
+<p>途中缺少apxs的依赖，自行安装</p>
+<ul>
+<li>配置httd.conf<br>找到：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AddType application/x-gzip .gz .tgz</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在该行下面添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AddType application/x-httpd-php .php</span><br></pre></td></tr></table></figure></p>
+<p>找到：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;IfModule dir_module&#62;&#10;    DirectoryIndex index.html&#10;&#60;/IfModule&#62;</span><br></pre></td></tr></table></figure></p>
+<p>将该行改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;IfModule dir_module&#62;&#10;    DirectoryIndex index.html index.htm index.php&#10;&#60;/IfModule&#62;</span><br></pre></td></tr></table></figure></p>
 <p>整个环境基本配置好了</p>
 
       
