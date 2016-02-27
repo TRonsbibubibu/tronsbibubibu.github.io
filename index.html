@@ -111,7 +111,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Laravel/" style="font-size: 10px;">Laravel</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/PHP/" style="font-size: 15px;">PHP</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Vue-js/" style="font-size: 15px;">Vue.js</a>
+						<a href="/tags/Doctrine/" style="font-size: 10px;">Doctrine</a> <a href="/tags/Laravel/" style="font-size: 10px;">Laravel</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Vue-js/" style="font-size: 15px;">Vue.js</a>
 					</div>
 				</section>
 				
@@ -180,6 +180,80 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Doctrine-数据库乱码问题" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/27/Doctrine-数据库乱码问题/" class="article-date">
+  	<time datetime="2016-02-27T10:07:54.000Z" itemprop="datePublished">2016-02-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/27/Doctrine-数据库乱码问题/">Doctrine 数据库乱码问题</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&#x5728;&#x4F7F;&#x7528;doctrine&#x7684;&#x65F6;&#x5019;&#x7ECF;&#x5E38;&#x4F1A;&#x9047;&#x5230;&#x4E2D;&#x6587;&#x4E71;&#x7801;&#x95EE;&#x9898;&#xFF0C;<br>&#x591A;&#x534A;&#x662F;&#x4E00;&#x4E0B;&#x51E0;&#x70B9;&#x5F15;&#x8D77;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;</li>
+<li>&#x6570;&#x636E;&#x5E93;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;</li>
+<li>server&#x672C;&#x8EAB;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;</li>
+<li>php&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x65F6;&#x5019;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;</li>
+</ul>
+<p>&#x53EA;&#x8981; <strong>&#x7EDF;&#x4E00;&#x5B57;&#x7B26;&#x7F16;&#x7801;</strong> &#xFF0C;&#x6570;&#x636E;&#x5E93;&#x5C31;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x4E71;&#x7801;&#x95EE;&#x9898;</p>
+<p>&#x5EFA;&#x7ACB;&#x6570;&#x636E;&#x5E93;&#xFF0C;php&#x6587;&#x4EF6;&#x90FD;&#x91C7;&#x7528;utf8</p>
+<p>&#x4ECA;&#x5929;&#x4E3B;&#x8981;&#x5C06; doctrine &#x5EFA;&#x7ACB;<strong>&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;</strong> &#x65F6;&#x5019;&#x5F15;&#x8D77;&#x7684;&#x4E2D;&#x6587;&#x4E71;&#x7801;</p>
+<p>doctrine&#x5EFA;&#x7ACB;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//&#x65B9;&#x6CD5;&#x4E00;</span></span><br><span class="line"> <span class="variable">$config</span> = <span class="keyword">new</span> \Doctrine\DBAL\Configuration();</span><br><span class="line"><span class="comment">//..</span></span><br><span class="line"><span class="variable">$connectionParams</span> = <span class="keyword">array</span>(</span><br><span class="line">    <span class="string">&apos;dbname&apos;</span> =&gt; <span class="string">&apos;mydb&apos;</span>,</span><br><span class="line">    <span class="string">&apos;user&apos;</span> =&gt; <span class="string">&apos;user&apos;</span>,</span><br><span class="line">    <span class="string">&apos;password&apos;</span> =&gt; <span class="string">&apos;secret&apos;</span>,</span><br><span class="line">    <span class="string">&apos;host&apos;</span> =&gt; <span class="string">&apos;localhost&apos;</span>,</span><br><span class="line">    <span class="string">&apos;driver&apos;</span> =&gt; <span class="string">&apos;pdo_mysql&apos;</span>,</span><br><span class="line">);</span><br><span class="line"><span class="variable">$conn</span> = \Doctrine\DBAL\DriverManager::getConnection(<span class="variable">$connectionParams</span>, <span class="variable">$config</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//&#x65B9;&#x6CD5;&#x4E8C;</span></span><br><span class="line"><span class="variable">$config</span> = <span class="keyword">new</span> \Doctrine\DBAL\Configuration();</span><br><span class="line"><span class="comment">//..</span></span><br><span class="line"><span class="variable">$connectionParams</span> = <span class="keyword">array</span>(</span><br><span class="line">    <span class="string">&apos;url&apos;</span> =&gt; <span class="string">&apos;mysql://user:secret@localhost/mydb&apos;</span>,</span><br><span class="line">);</span><br><span class="line"><span class="variable">$conn</span> = \Doctrine\DBAL\DriverManager::getConnection(<span class="variable">$connectionParams</span>, <span class="variable">$config</span>);</span><br></pre></td></tr></table></figure>
+<p>&#x8FD9;&#x6837;&#x90FD;&#x53EF;&#x80FD;&#x4F1A;&#x5F15;&#x8D77;&#x4E2D;&#x6587;&#x4E71;&#x7801;<br>&#x53EA;&#x8981;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<strong>charset</strong>&#x53C2;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//&#x65B9;&#x6CD5;&#x4E00;</span></span><br><span class="line"> <span class="variable">$config</span> = <span class="keyword">new</span> \Doctrine\DBAL\Configuration();</span><br><span class="line"><span class="comment">//..</span></span><br><span class="line"><span class="variable">$connectionParams</span> = <span class="keyword">array</span>(</span><br><span class="line">    <span class="string">&apos;dbname&apos;</span> =&gt; <span class="string">&apos;mydb&apos;</span>,</span><br><span class="line">    <span class="string">&apos;user&apos;</span> =&gt; <span class="string">&apos;user&apos;</span>,</span><br><span class="line">    <span class="string">&apos;password&apos;</span> =&gt; <span class="string">&apos;secret&apos;</span>,</span><br><span class="line">    <span class="string">&apos;host&apos;</span> =&gt; <span class="string">&apos;localhost&apos;</span>,</span><br><span class="line">    <span class="string">&apos;driver&apos;</span> =&gt; <span class="string">&apos;pdo_mysql&apos;</span>,</span><br><span class="line">    <span class="string">&apos;charset&apos;</span> =&gt; <span class="string">&apos;utf8&apos;</span>,</span><br><span class="line">);</span><br><span class="line"><span class="variable">$conn</span> = \Doctrine\DBAL\DriverManager::getConnection(<span class="variable">$connectionParams</span>, <span class="variable">$config</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//&#x65B9;&#x6CD5;&#x4E8C;</span></span><br><span class="line"><span class="variable">$config</span> = <span class="keyword">new</span> \Doctrine\DBAL\Configuration();</span><br><span class="line"><span class="comment">//..</span></span><br><span class="line"><span class="variable">$connectionParams</span> = <span class="keyword">array</span>(</span><br><span class="line">    <span class="string">&apos;url&apos;</span> =&gt; <span class="string">&apos;mysql://user:secret@localhost/mydb?charset=UTF-8&apos;</span>,</span><br><span class="line">);</span><br><span class="line"><span class="variable">$conn</span> = \Doctrine\DBAL\DriverManager::getConnection(<span class="variable">$connectionParams</span>, <span class="variable">$config</span>);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Doctrine/">Doctrine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/记录/">记录</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Linux-常用命令" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -576,117 +650,6 @@ tar -xjf all.tar.bz2
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-js/">Vue.js</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/记录/">记录</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-centos安装lamp环境" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/23/centos安装lamp环境/" class="article-date">
-  	<time datetime="2016-02-23T12:16:47.000Z" itemprop="datePublished">2016-02-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/23/centos安装lamp环境/">centos安装lamp环境</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x4ECA;&#x5929;&#x5728;&#x4E00;&#x53F0;&#x65B0;&#x673A;&#x5668;&#x4E0A;&#x5B89;&#x88C5;lamp&#x73AF;&#x5883;&#xFF0C;<br>&#x672C;&#x6765;&#x60F3;&#x88C5;&#x4E00;&#x4E2A;xampp&#xFF0C;&#x7701;&#x4E8B;&#x3002;<br>&#x4F46;&#x662F;&#x60F3;&#x5230;&#x8FD9;&#x673A;&#x5668;&#x53EF;&#x80FD;&#x4EE5;&#x540E;&#x8FD8;&#x662F;&#x8981;&#x8DD1;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#xFF0C;<br>&#x8FD8;&#x662F;&#x8001;&#x8001;&#x5B9E;&#x5B9E;&#x624B;&#x52A8;&#x914D;&#x7F6E;</p>
-<p>&#x673A;&#x5668;&#x4E0A;&#x8DD1;&#x7684;&#x662F;centos6.7&#xFF0C;<br>&#x9996;&#x5148;&#x628A;&#x6E90;&#x6362;&#x6210;&#x7F51;&#x6613;&#x6E90;&#xFF08;&#x563F;&#x563F;&#x563F;&#xFF0C;&#x5927;&#x5BB6;&#x90FD;&#x61C2;&#x5F97;&#xFF09;</p>
-<ul>
-<li>&#x9996;&#x5148;&#x5907;&#x4EFD;/etc/yum.repos.d/CentOS-Base.repo<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>&#x4E3A;&#x4E86;&#x7701;&#x4E8B;&#xFF0C;&#x6211;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x5728;&#x7F51;&#x6613;&#x4E0B;&#x8F7D;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x81EA;&#x5DF1;&#x914D;&#x7F6E;&#x4E86;<br><a href="http://mirrors.163.com/.help/CentOS6-Base-163.repo" target="_blank" rel="external">&#x4F20;&#x9001;&#x95E8;</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum clean all
-yum makecache</span><br></pre></td></tr></table></figure>
-<p>&#x91CD;&#x65B0;&#x5EFA;&#x7ACB;&#x7F13;&#x5B58;</p>
-<ul>
-<li>&#x5B89;&#x88C5;apache2<br>apache2&#x5728;centos&#x4E0A;&#x53EB;&#x505A;httpd&#xFF0C;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install httpd</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>&#x542F;&#x52A8;apache<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd start</span><br></pre></td></tr></table></figure></p>
-<p>&#x542F;&#x52A8;&#x65B9;&#x5F0F;&#x8FD8;&#x6709;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#xFF0C;&#x6211;&#x6BD4;&#x8F83;&#x559C;&#x6B22;&#x8FD9;&#x79CD;<br>&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x767B;&#x9646;localhost&#x770B;&#x5230;apache&#x9875;&#x9762;&#x8868;&#x660E;&#x6210;&#x529F;&#xFF0C;<br>&#x542F;&#x52A8;&#x5931;&#x8D25;&#x7684;&#x8BDD;&#xFF0C;&#x770B;&#x770B;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x662F;&#x4E0D;&#x662F;&#x7AEF;&#x53E3;&#x5360;&#x7528;&#x4E4B;&#x7C7B;&#x7684;&#x95EE;&#x9898;</p>
-<ul>
-<li>&#x5B89;&#x88C5;mysql<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql mysql-server</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>&#x7136;&#x540E;&#x542F;&#x52A8;mysql<br>&#x6211;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x4ED6;&#x7684;&#x540D;&#x79F0;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service --status-all | grep mysq</span><br></pre></td></tr></table></figure></p>
-<p>&#x770B;&#x5230;&#x4ED6;&#x53EB;mysqld<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld start</span><br></pre></td></tr></table></figure></p>
-<p>&#x542F;&#x52A8;</p>
-<ul>
-<li>&#x7136;&#x540E;&#x5C31;&#x662F;php&#x4E86;&#xFF0C;&#x73B0;&#x5728;php7&#x5DF2;&#x7ECF;&#x5F00;&#x59CB;&#x666E;&#x53CA;&#x4E86;&#xFF0C;<br>&#x5C31;&#x88C5;&#x4E00;&#x4E2A;php7<br>php7&#x5728;linux&#x4E0A;&#x8981;&#x6E90;&#x7801;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;<br>&#x5728;&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x6E90;&#x7801;&#x5305;<br><a href="http://php.net/downloads.php" target="_blank" rel="external">&#x5B98;&#x7F51;&#x4F20;&#x9001;&#x95E8;</a><br>&#x6211;&#x4E0B;&#x8F7D;&#x7684;&#x662F;php7.0.3<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://cn2.php.net/get/php-7.0.3.tar.gz/from/this/mirror</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>&#x89E3;&#x538B;&#x8FDB;&#x5165;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zcvf mirror
-cd php-7.0-3</span><br></pre></td></tr></table></figure></p>
-<p>&#x7136;&#x540E;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure
-make
-make install</span><br></pre></td></tr></table></figure></p>
-<p>&#x4E2D;&#x9014;&#x770B;&#x7F3A;&#x5C11;&#x4EC0;&#x4E48;&#x4F9D;&#x8D56;&#x5C31;yum&#x5B89;&#x88C5;&#x4EC0;&#x4E48;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service httpd restart</span><br></pre></td></tr></table></figure>
-<p>&#x91CD;&#x542F;&#x670D;&#x52A1;&#x5668;&#x6253;&#x5F00;&#x7F51;&#x9875;&#xFF0C;&#x5374;&#x53D1;&#x73B0;php&#x5E76;&#x6CA1;&#x6709;&#x89E3;&#x6790;&#x6210;&#x529F;<br>&#x8FDB;&#x53BB;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/httpd/conf/httpd.conf</span><br></pre></td></tr></table></figure></p>
-<p>&#x53D1;&#x73B0;&#x6CA1;&#x6709;php&#x7684;apache&#x6A21;&#x5757;&#x4F9D;&#x8D56;<br>&#x67E5;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x662F;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x7F3A;&#x5C11;&#x4E86;&#x53C2;&#x6570;<br>&#x91CD;&#x65B0;&#x7F16;&#x8BD1;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --with-apxs2
-make
-make install</span><br></pre></td></tr></table></figure></p>
-<p>&#x9014;&#x4E2D;&#x7F3A;&#x5C11;apxs&#x7684;&#x4F9D;&#x8D56;&#xFF0C;&#x81EA;&#x884C;&#x5B89;&#x88C5;</p>
-<ul>
-<li>&#x914D;&#x7F6E;httd.conf<br>&#x627E;&#x5230;&#xFF1A;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AddType application/x-gzip .gz .tgz</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>&#x5728;&#x8BE5;&#x884C;&#x4E0B;&#x9762;&#x6DFB;&#x52A0;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AddType application/x-httpd-php .php</span><br></pre></td></tr></table></figure></p>
-<p>&#x627E;&#x5230;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule dir_module&gt;
-    DirectoryIndex index.html
-&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure></p>
-<p>&#x5C06;&#x8BE5;&#x884C;&#x6539;&#x4E3A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule dir_module&gt;
-    DirectoryIndex index.html index.htm index.php
-&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure></p>
-<p>&#x6574;&#x4E2A;&#x73AF;&#x5883;&#x57FA;&#x672C;&#x914D;&#x7F6E;&#x597D;&#x4E86;</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
 	</div>
 
       
