@@ -111,7 +111,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Doctrine/" style="font-size: 15px;">Doctrine</a> <a href="/tags/Laravel/" style="font-size: 10px;">Laravel</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Vue-js/" style="font-size: 15px;">Vue.js</a>
+						<a href="/tags/Doctrine/" style="font-size: 15px;">Doctrine</a> <a href="/tags/Laravel/" style="font-size: 10px;">Laravel</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Vue-js/" style="font-size: 20px;">Vue.js</a>
 					</div>
 				</section>
 				
@@ -180,6 +180,72 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Vue-js-slot的用法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/24/Vue-js-slot的用法/" class="article-date">
+  	<time datetime="2016-02-24T14:51:59.000Z" itemprop="datePublished">2016-02-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/24/Vue-js-slot的用法/">Vue.js slot的用法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>slot&#x5BF9;&#x4E8E;&#x591A;&#x4E2A;&#x7EC4;&#x4EF6;&#x7EC4;&#x5408;&#x65F6;&#x5019;&#x975E;&#x5E38;&#x6709;&#x7528;&#xFF0C;<br>&#x4ECA;&#x5929;&#x6309;&#x7167;&#x6587;&#x6863;&#x8BD5;&#x4E86;&#x4E00;&#x4E0B;</p>
+<p>&#x9996;&#x5148;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Component = Vue.extend({</span><br><span class="line">        template:<span class="string">&apos;&lt;div&gt;&lt;h1&gt;This is my component!&lt;/h1&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/div&gt;&apos;</span>,</span><br><span class="line">       components:{</span><br><span class="line">           <span class="string">&apos;template2&apos;</span>:{</span><br><span class="line">               template:<span class="string">&apos;&lt;h2 slot=&quot;123&quot;&gt;This is second component!&lt;slot&gt;&lt;/slot&gt;&lt;/h2&gt;&apos;</span></span><br><span class="line">           }</span><br><span class="line">       }</span><br><span class="line">   })</span><br></pre></td></tr></table></figure></p>
+<p>&#x58F0;&#x660E;&#x7EC4;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x6302;&#x5728;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x5143;&#x7D20;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> component = <span class="keyword">new</span> Component;</span><br><span class="line">    component.$mount(<span class="string">&apos;my-component&apos;</span>);</span><br><span class="line">    </span><br><span class="line"><span class="comment">//html&#x4EE3;&#x7801;</span></span><br><span class="line">&lt;my-component&gt;</span><br><span class="line">   <span class="xml"><span class="tag">&lt;<span class="title">p</span>&gt;</span>This is some original content<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is some more original content<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">my-component</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;slot&#x7684;&#x753B;&#xFF0C;my-component&#x91CC;&#x7684;p&#x6807;&#x7B7E;&#x5C06;&#x4F1A;&#x88AB;&#x76F4;&#x63A5;&#x8986;&#x76D6;&#xFF0C;<br>&#x4F46;&#x662F;&#x58F0;&#x660E;&#x4E86;slot&#x6807;&#x7B7E;&#x4E4B;&#x540E;&#xFF0C;<br>&#x539F;&#x6765;&#x7684;p&#x6807;&#x7B7E;&#x5C06;&#x4F1A;&#x88AB;&#x63D2;&#x5165;&#x5230;slot&#x91CC;&#x9762;<br>&#x7ED3;&#x679C;&#x5982;&#x4E0B;<br><img src="/2016/02/24/Vue-js-slot&#x7684;&#x7528;&#x6CD5;/image1.png" alt="&#x622A;&#x56FE;1"></p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5728;&#x52A0;&#x591A;&#x4E00;&#x5C42;&#x7EC4;&#x4EF6;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Component = Vue.extend({</span><br><span class="line">        template:<span class="string">&apos;&lt;div&gt;&lt;h1&gt;This is my component!&lt;/h1&gt;&lt;slot&gt;&lt;/slot&gt;&lt;template2&gt;&lt;h1&gt;dont forget me&lt;/h1&gt;&lt;/template2&gt;&lt;/div&gt;&apos;</span>,</span><br><span class="line">       components:{</span><br><span class="line">           <span class="string">&apos;template2&apos;</span>:{</span><br><span class="line">               template:<span class="string">&apos;&lt;h2 slot=&quot;123&quot;&gt;This is second component!&lt;slot&gt;&lt;/slot&gt;&lt;/h2&gt;&apos;</span></span><br><span class="line">           }</span><br><span class="line">       }</span><br><span class="line">   })</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> component = <span class="keyword">new</span> Component;</span><br><span class="line">    component.$mount(<span class="string">&apos;my-component&apos;</span>);</span><br></pre></td></tr></table></figure></p>
+<p>&#x7ED3;&#x679C;&#x5982;&#x4E0B;<br><img src="/2016/02/24/Vue-js-slot&#x7684;&#x7528;&#x6CD5;/image2.png" alt="&#x622A;&#x56FE;1"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-js/">Vue.js</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/记录/">记录</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Vue-父组件往子组件数据通信" class="article article-type-post" itemscope itemprop="blogPost">
   
