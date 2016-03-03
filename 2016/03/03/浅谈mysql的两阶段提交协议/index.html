@@ -4,17 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>TRons的博客</title>
+  <title>浅谈mysql的两阶段提交协议 | TRons的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TRons的博客">
-<meta property="og:url" content="http://blog.trons.top/index.html">
+  <meta name="description" content="&amp;#x524D;&amp;#x4E24;&amp;#x5929;&amp;#x548C;&amp;#x767E;&amp;#x5EA6;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x540C;&amp;#x5B66;&amp;#x804A;MySQL&amp;#x4E24;&amp;#x9636;&amp;#x6BB5;&amp;#x63D0;&amp;#x4EA4;,&amp;#x5F53;&amp;#x65F6;&amp;#x81EA;&amp;#x4FE1;&amp;#x6EE1;&amp;#x6EE1;&amp;#x7684;&amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈mysql的两阶段提交协议">
+<meta property="og:url" content="http://blog.trons.top/2016/03/03/浅谈mysql的两阶段提交协议/index.html">
 <meta property="og:site_name" content="TRons的博客">
-<meta property="og:description">
+<meta property="og:description" content="&amp;#x524D;&amp;#x4E24;&amp;#x5929;&amp;#x548C;&amp;#x767E;&amp;#x5EA6;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x540C;&amp;#x5B66;&amp;#x804A;MySQL&amp;#x4E24;&amp;#x9636;&amp;#x6BB5;&amp;#x63D0;&amp;#x4EA4;,&amp;#x5F53;&amp;#x65F6;&amp;#x81EA;&amp;#x4FE1;&amp;#x6EE1;&amp;#x6EE1;&amp;#x7684;&amp;#">
+<meta property="og:image" content="http://blog.trons.top/2016/03/03/浅谈mysql的两阶段提交协议/image1.gif">
+<meta property="og:image" content="http://blog.trons.top/2016/03/03/浅谈mysql的两阶段提交协议/image2.gif">
+<meta property="og:image" content="http://blog.trons.top/2016/03/03/浅谈mysql的两阶段提交协议/image3.jpg">
+<meta property="og:updated_time" content="2016-03-03T07:56:04.501Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TRons的博客">
-<meta name="twitter:description">
+<meta name="twitter:title" content="浅谈mysql的两阶段提交协议">
+<meta name="twitter:description" content="&amp;#x524D;&amp;#x4E24;&amp;#x5929;&amp;#x548C;&amp;#x767E;&amp;#x5EA6;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x540C;&amp;#x5B66;&amp;#x804A;MySQL&amp;#x4E24;&amp;#x9636;&amp;#x6BB5;&amp;#x63D0;&amp;#x4EA4;,&amp;#x5F53;&amp;#x65F6;&amp;#x81EA;&amp;#x4FE1;&amp;#x6EE1;&amp;#x6EE1;&amp;#x7684;&amp;#">
   
     <link rel="alternative" href="/atom.xml" title="TRons的博客" type="application/atom+xml">
   
@@ -179,9 +183,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-浅谈mysql的两阶段提交协议" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-浅谈mysql的两阶段提交协议" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/03/03/浅谈mysql的两阶段提交协议/" class="article-date">
@@ -197,12 +199,27 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/03/浅谈mysql的两阶段提交协议/">浅谈mysql的两阶段提交协议</a>
+    <h1 class="article-title" itemprop="name">
+      浅谈mysql的两阶段提交协议
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/转载/">转载</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -252,90 +269,40 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/转载/">转载</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/03/01/坑爹Vue之语法错误/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">坑爹Vue之语法错误</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-
-
-
-
-
-
-  
-    <article id="post-坑爹Vue之语法错误" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/01/坑爹Vue之语法错误/" class="article-date">
-  	<time datetime="2016-03-01T08:32:37.000Z" itemprop="datePublished">2016-03-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/01/坑爹Vue之语法错误/">坑爹Vue之语法错误</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x4F7F;&#x7528;&#x5B98;&#x65B9;&#x7684; <strong>vue-cli</strong> init &#x7684;&#x9879;&#x76EE;<br>&#x4E00;&#x5F00;&#x59CB;&#x4F7F;&#x7528;&#xFF0C;&#x5404;&#x79CD;&#x62A5;&#x9519;</p>
-<p>&#x6709;&#x8FD9;&#x6837;&#x7684;<br><img src="/2016/03/01/&#x5751;&#x7239;Vue&#x4E4B;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;/image1.png" alt=""></p>
-<p>&#x6709;&#x8FD9;&#x6837;&#x7684;<br><img src="/2016/03/01/&#x5751;&#x7239;Vue&#x4E4B;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;/image2.png" alt=""></p>
-<p>&#x6709;&#x8FD9;&#x6837;&#x7684;<br><img src="/2016/03/01/&#x5751;&#x7239;Vue&#x4E4B;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;/image3.png" alt=""></p>
-<p>&#x8FD8;&#x6709;&#x8FD9;&#x6837;&#x7684;<br><img src="/2016/03/01/&#x5751;&#x7239;Vue&#x4E4B;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;/image4.png" alt=""></p>
-<p>&#x751A;&#x81F3;&#x6709;&#x8FD9;&#x6837;&#x7684;<br><img src="/2016/03/01/&#x5751;&#x7239;Vue&#x4E4B;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;/image5.png" alt=""></p>
-<p>&#x8FD9;&#x5565;&#x73A9;&#x610F;&#xFF0C;&#x8FD8;&#x505A;&#x8BED;&#x6CD5;&#x68C0;&#x67E5;&#xFF0C;&#x6211;&#x5C31;&#x662F;&#x60F3;&#x597D;&#x597D;&#x7684;&#x5199;&#x4E2A;js</p>
-<p>= =&#x540E;&#x6765;&#x624D;&#x53D1;&#x73B0;&#x539F;&#x6765;.vue&#x6587;&#x4EF6;&#x7684;script&#x5934;&#x4E0A;&#x52A0;&#x4E0A;es6&#x7684;&#x6807;&#x7B7E;&#x5C31;&#x597D;&#x4E86;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/ecmascript-6&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-js/">Vue.js</a></li></ul>
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
@@ -344,250 +311,6 @@
 
 
 
-
-  
-    <article id="post-Doctrine-原生sql的一种写法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/29/Doctrine-原生sql的一种写法/" class="article-date">
-  	<time datetime="2016-02-29T15:13:48.000Z" itemprop="datePublished">2016-02-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/29/Doctrine-原生sql的一种写法/">Doctrine 原生sql的一种写法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>orm&#x867D;&#x7136;&#x597D;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E9B;&#x7279;&#x6B8A;&#x7684; sql &#x7528;&#x5BF9;&#x8C61;&#x96BE;&#x4EE5;&#x5B9E;&#x73B0;<br>&#x5B98;&#x7F51;&#x4E0A;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2D; <strong>Native</strong> SQL &#x7684;&#x7528;&#x6CD5;</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="keyword">use</span> <span class="title">Doctrine</span>\<span class="title">ORM</span>\<span class="title">Query</span>\<span class="title">ResultSetMapping</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$rsm</span> = <span class="keyword">new</span> ResultSetMapping();</span><br><span class="line"><span class="comment">// build rsm here</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$query</span> = <span class="variable">$entityManager</span>-&gt;createNativeQuery(<span class="string">&apos;SELECT id, name, discr FROM users WHERE name = ?&apos;</span>, <span class="variable">$rsm</span>);</span><br><span class="line"><span class="variable">$query</span>-&gt;setParameter(<span class="number">1</span>, <span class="string">&apos;romanb&apos;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$users</span> = <span class="variable">$query</span>-&gt;getResult();</span><br></pre></td></tr></table></figure>
-<p>&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x4F1A;&#x4F9D;&#x8D56; <strong>ResultSetMapping()</strong> &#xFF0C;&#x9700;&#x8981;&#x505A;&#x597D;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x4E14;&#x4E00;&#x4E9B;&#x590D;&#x6742;&#x7684; sql &#x8BED;&#x53E5;&#x4E5F;&#x662F;&#x8FD0;&#x884C;&#x4E0D;&#x4E86;&#xFF0C;<br>&#x56E0;&#x4E3A; orm &#x8FD4;&#x56DE;&#x7684;&#x5FC5;&#x987B;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x56E0;&#x6B64;&#x6709;&#x4E9B; <strong>join</strong>&#x7684;&#x8BED;&#x53E5;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x7A7A;</p>
-<p>&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x66F4;&#x52A0;&#x5E95;&#x5C42;&#x7684;</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sql</span> = <span class="string">&quot; </span><br><span class="line">       SELECT name,</span><br><span class="line">              event_type,</span><br><span class="line">              sport_type,</span><br><span class="line">              level</span><br><span class="line">         FROM vnn_sport</span><br><span class="line">   &quot;</span>;</span><br><span class="line"></span><br><span class="line">   <span class="variable">$stmt</span> = <span class="variable">$this</span>-&gt;getEntityManager()-&gt;getConnection()-&gt;prepare(<span class="variable">$sql</span>);</span><br><span class="line">   <span class="variable">$stmt</span>-&gt;execute();</span><br><span class="line">   <span class="keyword">return</span> <span class="variable">$stmt</span>-&gt;fetchAll();</span><br></pre></td></tr></table></figure>
-<p>&#x53E6;&#x5916;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>$stmt-&gt;blind</strong> &#x6765;&#x7ED1;&#x5B9A;&#x53C2;&#x6570;</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Doctrine/">Doctrine</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/记录/">记录</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Doctrine-数据库乱码问题" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/27/Doctrine-数据库乱码问题/" class="article-date">
-  	<time datetime="2016-02-27T10:07:54.000Z" itemprop="datePublished">2016-02-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/27/Doctrine-数据库乱码问题/">Doctrine 数据库乱码问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x5728;&#x4F7F;&#x7528;doctrine&#x7684;&#x65F6;&#x5019;&#x7ECF;&#x5E38;&#x4F1A;&#x9047;&#x5230;&#x4E2D;&#x6587;&#x4E71;&#x7801;&#x95EE;&#x9898;&#xFF0C;<br>&#x591A;&#x534A;&#x662F;&#x4E00;&#x4E0B;&#x51E0;&#x70B9;&#x5F15;&#x8D77;</p>
-<ul>
-<li>&#x6587;&#x4EF6;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;</li>
-<li>&#x6570;&#x636E;&#x5E93;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;</li>
-<li>server&#x672C;&#x8EAB;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;</li>
-<li>php&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x65F6;&#x5019;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;</li>
-</ul>
-<p>&#x53EA;&#x8981; <strong>&#x7EDF;&#x4E00;&#x5B57;&#x7B26;&#x7F16;&#x7801;</strong> &#xFF0C;&#x6570;&#x636E;&#x5E93;&#x5C31;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x4E71;&#x7801;&#x95EE;&#x9898;</p>
-<p>&#x5EFA;&#x7ACB;&#x6570;&#x636E;&#x5E93;&#xFF0C;php&#x6587;&#x4EF6;&#x90FD;&#x91C7;&#x7528;utf8</p>
-<p>&#x4ECA;&#x5929;&#x4E3B;&#x8981;&#x5C06; doctrine &#x5EFA;&#x7ACB;<strong>&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;</strong> &#x65F6;&#x5019;&#x5F15;&#x8D77;&#x7684;&#x4E2D;&#x6587;&#x4E71;&#x7801;</p>
-<p>doctrine&#x5EFA;&#x7ACB;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;</p>
- <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//&#x65B9;&#x6CD5;&#x4E00;</span></span><br><span class="line"> <span class="variable">$config</span> = <span class="keyword">new</span> \Doctrine\DBAL\Configuration();</span><br><span class="line"><span class="comment">//..</span></span><br><span class="line"><span class="variable">$connectionParams</span> = <span class="keyword">array</span>(</span><br><span class="line">    <span class="string">&apos;dbname&apos;</span> =&gt; <span class="string">&apos;mydb&apos;</span>,</span><br><span class="line">    <span class="string">&apos;user&apos;</span> =&gt; <span class="string">&apos;user&apos;</span>,</span><br><span class="line">    <span class="string">&apos;password&apos;</span> =&gt; <span class="string">&apos;secret&apos;</span>,</span><br><span class="line">    <span class="string">&apos;host&apos;</span> =&gt; <span class="string">&apos;localhost&apos;</span>,</span><br><span class="line">    <span class="string">&apos;driver&apos;</span> =&gt; <span class="string">&apos;pdo_mysql&apos;</span>,</span><br><span class="line">);</span><br><span class="line"><span class="variable">$conn</span> = \Doctrine\DBAL\DriverManager::getConnection(<span class="variable">$connectionParams</span>, <span class="variable">$config</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//&#x65B9;&#x6CD5;&#x4E8C;</span></span><br><span class="line"><span class="variable">$config</span> = <span class="keyword">new</span> \Doctrine\DBAL\Configuration();</span><br><span class="line"><span class="comment">//..</span></span><br><span class="line"><span class="variable">$connectionParams</span> = <span class="keyword">array</span>(</span><br><span class="line">    <span class="string">&apos;url&apos;</span> =&gt; <span class="string">&apos;mysql://user:secret@localhost/mydb&apos;</span>,</span><br><span class="line">);</span><br><span class="line"><span class="variable">$conn</span> = \Doctrine\DBAL\DriverManager::getConnection(<span class="variable">$connectionParams</span>, <span class="variable">$config</span>);</span><br></pre></td></tr></table></figure>
-<p>&#x8FD9;&#x6837;&#x90FD;&#x53EF;&#x80FD;&#x4F1A;&#x5F15;&#x8D77;&#x4E2D;&#x6587;&#x4E71;&#x7801;<br>&#x53EA;&#x8981;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<strong>charset</strong>&#x53C2;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</p>
- <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//&#x65B9;&#x6CD5;&#x4E00;</span></span><br><span class="line"> <span class="variable">$config</span> = <span class="keyword">new</span> \Doctrine\DBAL\Configuration();</span><br><span class="line"><span class="comment">//..</span></span><br><span class="line"><span class="variable">$connectionParams</span> = <span class="keyword">array</span>(</span><br><span class="line">    <span class="string">&apos;dbname&apos;</span> =&gt; <span class="string">&apos;mydb&apos;</span>,</span><br><span class="line">    <span class="string">&apos;user&apos;</span> =&gt; <span class="string">&apos;user&apos;</span>,</span><br><span class="line">    <span class="string">&apos;password&apos;</span> =&gt; <span class="string">&apos;secret&apos;</span>,</span><br><span class="line">    <span class="string">&apos;host&apos;</span> =&gt; <span class="string">&apos;localhost&apos;</span>,</span><br><span class="line">    <span class="string">&apos;driver&apos;</span> =&gt; <span class="string">&apos;pdo_mysql&apos;</span>,</span><br><span class="line">    <span class="string">&apos;charset&apos;</span> =&gt; <span class="string">&apos;utf8&apos;</span>,</span><br><span class="line">);</span><br><span class="line"><span class="variable">$conn</span> = \Doctrine\DBAL\DriverManager::getConnection(<span class="variable">$connectionParams</span>, <span class="variable">$config</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//&#x65B9;&#x6CD5;&#x4E8C;</span></span><br><span class="line"><span class="variable">$config</span> = <span class="keyword">new</span> \Doctrine\DBAL\Configuration();</span><br><span class="line"><span class="comment">//..</span></span><br><span class="line"><span class="variable">$connectionParams</span> = <span class="keyword">array</span>(</span><br><span class="line">    <span class="string">&apos;url&apos;</span> =&gt; <span class="string">&apos;mysql://user:secret@localhost/mydb?charset=UTF-8&apos;</span>,</span><br><span class="line">);</span><br><span class="line"><span class="variable">$conn</span> = \Doctrine\DBAL\DriverManager::getConnection(<span class="variable">$connectionParams</span>, <span class="variable">$config</span>);</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Doctrine/">Doctrine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/记录/">记录</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Linux-常用命令" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/27/Linux-常用命令/" class="article-date">
-  	<time datetime="2016-02-27T05:16:42.000Z" itemprop="datePublished">2016-02-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/27/Linux-常用命令/">Linux 常用命令</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x8FD9;&#x91CC;&#x8BB0;&#x4E0B;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x7684;linux&#x547D;&#x4EE4;</p>
-<p>&#x6709;&#x65F6;&#x4F1A;&#x5FD8;&#x8BB0;</p>
-<h2 id="mysql&#x7684;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;&#x6388;&#x6743;"><a href="#mysql&#x7684;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;&#x6388;&#x6743;" class="headerlink" title="mysql&#x7684;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;&#x6388;&#x6743;"></a>mysql&#x7684;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;&#x6388;&#x6743;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON *.* TO &apos;[user_name]&apos;@&apos;[ip_address]&apos; IDENTIFIED BY &apos;[password]&apos; WITH GRANT OPTION;
-
-[user_name] &#x7528;&#x6237;&#x540D;
-[ip_address] &#x6388;&#x6743;&#x7684;ip&#x5730;&#x5740;
-[password] &#x6388;&#x6743;&#x53E3;&#x4EE4;</span><br></pre></td></tr></table></figure>
-<h2 id="Zip&#x548C;unzip&#x538B;&#x7F29;&#x6587;&#x4EF6;"><a href="#Zip&#x548C;unzip&#x538B;&#x7F29;&#x6587;&#x4EF6;" class="headerlink" title="Zip&#x548C;unzip&#x538B;&#x7F29;&#x6587;&#x4EF6;"></a>Zip&#x548C;unzip&#x538B;&#x7F29;&#x6587;&#x4EF6;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip -r myfile.zip ./*
-//&#x5C06;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x548C;&#x6587;&#x4EF6;&#x5939;&#x5168;&#x90E8;&#x538B;&#x7F29;&#x6210;myfile.zip
-
-zip -d myfile.zip smart.txt
-//&#x5220;&#x9664;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x4E2D;smart.txt&#x6587;&#x4EF6;
-
-zip -m myfile.zip ./rpm_info.txt
-//&#x5411;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x4E2D;myfile.zip&#x4E2D;&#x6DFB;&#x52A0;rpm_info.txt&#x6587;&#x4EF6;
-
-unzip -o -d /home/sunny myfile.zip
-/&#x628A;myfile.zip&#x6587;&#x4EF6;&#x89E3;&#x538B;&#x5230; /home/sunny/</span><br></pre></td></tr></table></figure>
-<h2 id="Tar&#x538B;&#x7F29;&#x6587;&#x4EF6;"><a href="#Tar&#x538B;&#x7F29;&#x6587;&#x4EF6;" class="headerlink" title="Tar&#x538B;&#x7F29;&#x6587;&#x4EF6;"></a>Tar&#x538B;&#x7F29;&#x6587;&#x4EF6;</h2><blockquote>
-<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;<br>-z  &#xFF1A;&#x662F;&#x5426;&#x540C;&#x65F6;&#x5177;&#x6709; gzip &#x7684;&#x5C5E;&#x6027;&#xFF1F;<br>-x  &#xFF1A;&#x89E3;&#x5F00;&#x4E00;&#x4E2A;&#x538B;&#x7F29;&#x6863;&#x6848;&#x7684;&#x53C2;&#x6570;&#x6307;&#x4EE4;&#xFF01;<br>-t  &#xFF1A;&#x67E5;&#x770B; tarfile &#x91CC;&#x9762;&#x7684;&#x6863;&#x6848;&#xFF01;<br>-c  &#xFF1A;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x538B;&#x7F29;&#x6863;&#x6848;&#x7684;&#x53C2;&#x6570;&#x6307;&#x4EE4;<br>-v  &#xFF1A;&#x538B;&#x7F29;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x663E;&#x793A;&#x6863;&#x6848;&#xFF01;<br>-f  &#xFF1A;&#x4F7F;&#x7528;&#x6863;&#x540D;&#xFF0C;&#x8BF7;&#x7559;&#x610F;&#xFF0C;&#x5728; f &#x4E4B;&#x540E;&#x8981;&#x7ACB;&#x5373;&#x63A5;&#x6863;&#x540D;&#x5594;&#xFF01;&#x4E0D;&#x8981;&#x518D;&#x52A0;&#x53C2;&#x6570;&#xFF01;<br>&#x3000;&#x3000;&#x3000;&#x4F8B;&#x5982;&#x4F7F;&#x7528;&#x300E; tar -zcvfP tfile sfile&#x300F;&#x5C31;&#x662F;&#x9519;&#x8BEF;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x8981;&#x5199;&#x6210;<br>&#x3000;&#x3000;&#x3000;&#x300E; tar -zcvPf tfile sfile&#x300F;&#x624D;&#x5BF9;&#x5594;&#xFF01;<br>-p  &#xFF1A;&#x4F7F;&#x7528;&#x539F;&#x6863;&#x6848;&#x7684;&#x539F;&#x6765;&#x5C5E;&#x6027;&#xFF08;&#x5C5E;&#x6027;&#x4E0D;&#x4F1A;&#x4F9D;&#x636E;&#x4F7F;&#x7528;&#x8005;&#x800C;&#x53D8;&#xFF09;<br>-P  &#xFF1A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;<br>-N  &#xFF1A;&#x6BD4;&#x540E;&#x9762;&#x63A5;&#x7684;&#x65E5;&#x671F;(yyyy/mm/dd)&#x8FD8;&#x8981;&#x65B0;&#x7684;&#x624D;&#x4F1A;&#x88AB;&#x6253;&#x5305;&#x8FDB;&#x65B0;&#x5EFA;&#x7684;&#x6863;&#x6848;&#x4E2D;&#xFF01;<br>&#x2013;exclude FILE&#xFF1A;&#x5728;&#x538B;&#x7F29;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E0D;&#x8981;&#x5C06; FILE &#x6253;&#x5305;&#xFF01;  </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -cvf directory.tar directory 
-//&#x53EA;&#x5C06;&#x76EE;&#x5F55;&#x6574;&#x5408;&#x6253;&#x5305;&#x6210;&#x4E00;&#x4E2A;&#x6863;&#x6848; 
-
-tar -zcvf directory.tar.gz directory
-//&#x9664;&#x4E86;&#x5C06;&#x76EE;&#x5F55;&#x6253;&#x5305;&#x5916;&#xFF0C;&#x540C;&#x65F6;&#x4EE5; gzip &#x538B;&#x7F29; 
-
-tar -zcvf filename.tar.gz  /home/test/*
-//&#x5C06; /home/test/ &#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6863;&#x6848;&#x5168;&#x90E8;&#x6253;&#x5305;&#x5E76;&#x538B;&#x7F29;&#x6210;&#x4E3A;&#x4E00;&#x4E2A; filename.tar.gz &#x7684;&#x6863;&#x6848;
-
-tar -jcvf /tmp/etc.tar.bz2 /etc 
-//&#x6253;&#x5305;&#x540E;&#xFF0C;&#x4EE5; bzip2 &#x538B;&#x7F29;
-
-tar -xjf all.tar.bz2 
-//&#x8FD9;&#x6761;&#x547D;&#x4EE4;&#x662F;&#x5C06;&#x4E0A;&#x9762;&#x4EA7;&#x751F;&#x7684;&#x5305;&#x89E3;&#x5F00;</span><br></pre></td></tr></table></figure>
-<h2 id="Linux-scp-&#x547D;&#x4EE4;"><a href="#Linux-scp-&#x547D;&#x4EE4;" class="headerlink" title="Linux scp &#x547D;&#x4EE4;"></a>Linux scp &#x547D;&#x4EE4;</h2><p><strong>&#x4ECE; &#x672C;&#x5730; &#x590D;&#x5236;&#x5230; &#x8FDC;&#x7A0B;</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp local_file remote_username@remote_ip:remote_folder</span><br></pre></td></tr></table></figure></p>
-<p><strong>&#x4ECE; &#x8FDC;&#x7A0B; &#x590D;&#x5236;&#x5230; &#x672C;&#x5730;</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp remote_username@remote_ip:remote_folder local_file</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/记录/">记录</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -613,8 +336,8 @@ tar -xjf all.tar.bz2
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
